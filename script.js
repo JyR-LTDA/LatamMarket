@@ -46,7 +46,7 @@ function formatPrice(price) {
 // Render products dynamically based on array
 function renderProducts(productsToRender) {
     productGrid.innerHTML = ''; // Limpiar grilla
-    
+
     if (productsToRender.length === 0) {
         productGrid.innerHTML = '<p style="grid-column: 1/-1; text-align: center; padding: 2rem; color: var(--text-light);">No hay productos en esta categoría.</p>';
         return;
@@ -71,14 +71,14 @@ function renderProducts(productsToRender) {
 categoryNavLinks.forEach(link => {
     link.addEventListener('click', (e) => {
         e.preventDefault();
-        
+
         // Quitar clase active de todos
         categoryNavLinks.forEach(nav => nav.classList.remove('active'));
         // Agregar a este
         e.target.classList.add('active');
 
         const category = e.target.getAttribute('data-category');
-        
+
         if (category === 'all') {
             renderProducts(products);
         } else {
@@ -90,7 +90,7 @@ categoryNavLinks.forEach(link => {
 
 function addToCart(productId) {
     const product = products.find(p => p.id === productId);
-    
+
     // Verificar si ya está en el carrito
     const existingItem = cart.find(item => item.id === productId);
     if (existingItem) {
@@ -100,7 +100,7 @@ function addToCart(productId) {
     }
 
     updateCartUI();
-    
+
     // Animación pequeña en el icono
     cartCountElement.style.transform = 'scale(1.5)';
     setTimeout(() => {
@@ -147,7 +147,7 @@ function updateCartUI() {
 
 // Controlar apertura/cierre del carrito
 function toggleCart(e) {
-    if(e) e.preventDefault();
+    if (e) e.preventDefault();
     cartSidebar.classList.toggle('active');
     cartOverlay.classList.toggle('active');
 }
