@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LatamMarket</title>
+    <meta name="description" content="Tu tienda online de confianza en Chile y Latinoamérica.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Topbar -->
+    <div class="topbar">
+        <div class="topbar-container">
+            <div class="topbar-left">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="https://wa.me/56931720390" target="_blank" title="Contáctanos por WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <div class="topbar-right">
+                <a href="registro.html">Ingresar / Registrarse</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo.jpg" alt="LatamMarket Logo" class="logo-img">
+                </a>
+            </div>
+            <div class="search-container">
+                <input type="text" placeholder="Buscar productos...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="cart-container" style="display: flex; gap: 1.5rem;">
+                <a href="#" id="favIcon" class="cart-icon" title="Mis Favoritos">
+                    <i class="far fa-heart"></i>
+                    <span class="fav-count" id="favCount">0</span>
+                </a>
+                <a href="#" id="cartIcon" class="cart-icon" title="Mi Carrito">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <ul id="categoryNav">
+            <li><a href="#" class="active" data-category="all">TIENDA</a></li>
+            <li><a href="#" data-category="niños">Niños</a></li>
+            <li><a href="#" data-category="mujer">Catálogo Mujer</a></li>
+            <li><a href="#" data-category="bolsos">Carteras y bolsos</a></li>
+            <li><a href="#" data-category="hombre">Hombre</a></li>
+            <li><a href="#" data-category="hogar">Artículos de hogar</a></li>
+            <li><a href="#footer-contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Alert Banner -->
+    <div class="alert-banner">
+        <p>Envíos a todo Chile y Latinoamérica. Revisa nuestras políticas de envío.</p>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="products-grid" id="productGrid">
+            <!-- Products injected by JS -->
+        </div>
+    </main>
+
+    <!-- Cart Overlay (Shared for both sidebars) -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    
+    <!-- Favorites Sidebar -->
+    <div class="cart-sidebar" id="favSidebar">
+        <div class="cart-header">
+            <h2>Mis Favoritos</h2>
+            <button class="close-cart" id="closeFav"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="favItems">
+            <!-- Favorite items will be injected here -->
+        </div>
+    </div>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2>Tu Carrito</h2>
+            <button class="close-cart" id="closeCart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Items will be injected here -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotalValue">$0</span>
+            </div>
+            <button class="checkout-btn">Proceder al Pago</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer-contacto">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>Sobre Nosotros</h4>
+                <p>LatamMarket es tu tienda online de confianza. Ofrecemos la mejor selección de productos con envíos rápidos y seguros a todo el país. Calidad, diseño y excelente servicio desde el norte de Chile.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Atención al Cliente</h4>
+                <p><i class="fas fa-envelope"></i> aaltamirano082@gmail.com</p>
+                <p><i class="fab fa-whatsapp"></i> +56 9 3172 0390</p>
+                <p><i class="fas fa-map-marker-alt"></i> Antofagasta, Chile</p>
+            </div>
+            <div class="footer-col">
+                <h4>Menú</h4>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Tienda</a></li>
+                    <li><a href="#">Información</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Suscríbete a Nuestro Newsletter</h4>
+                <div class="newsletter">
+                    <input type="email" placeholder="Tu correo electrónico">
+                    <button>Suscribirse</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 LatamMarket. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
